@@ -1,0 +1,28 @@
+html, body {
+  background-color: #fff;
+  /* width: 100vw;
+  height: 100vh; */
+  /* max-width: 100vw;
+  max-height: 100vh; */
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  background-color: #eee;
+  /* width: 100vw;
+  height: 100vh; */
+  /* max-width: 100vw;
+  max-height: 100vh; */
+  margin: 0;
+  padding: 0;
+}
+
+.scene-tooltip {
+  padding: .5rem;
+  color: white;
+  background: #000000bb;
+  border: 1pt solid #333;
+  border-radius: 5px;
+  box-shadow: 2px 2px 2px #00000033;
+}

@@ -1,0 +1,45 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 6rem;
+}
+
+.line {
+  position: relative;
+  height: 1rem;
+  box-sizing: border-box;
+  border-bottom: 5pt solid white;
+}
+
+.yin {
+  composes: line;
+}
+
+.yin::before {
+  position: absolute;
+  left: 0;
+  content: ' ';
+  height: 1rem;
+  background-color: black;
+  width: 40%;
+  box-sizing: border-box;
+  border-bottom: 5pt solid white;
+}
+
+.yin::after {
+  position: absolute;
+  content: ' ';
+  right: 0;
+  height: 1rem;
+  background-color: black;
+  width: 40%;
+  box-sizing: border-box;
+  border-bottom: 5pt solid white;
+}
+
+.yang {
+  composes: line;
+  width: 100%;
+  background-color: black;
+}

@@ -1,0 +1,95 @@
+.wrapper {
+  position: relative;
+  display: inline-block;
+  width: 5rem;
+  height: 6rem;
+  outline: 1pt solid black;
+  transform: rotate(90deg);
+}
+
+.core {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 4rem;
+}
+
+.line-1 {
+  width: 100%;
+  height: 1rem;
+}
+
+.line-2 {
+  width: 50%;
+  height: 2rem;
+}
+
+.line-3 {
+  width: 50%;
+  height: 2rem;
+}
+
+.line-4 {
+  width: 50%;
+  height: 2rem;
+}
+
+.line-5 {
+  width: 50%;
+  height: 2rem;
+}
+
+.line-6 {
+  width: 100%;
+  height: 1rem;
+}
+
+.line-1-yin {
+  composes: line-1;
+  background-color: #000;
+}
+.line-2-yin {
+  composes: line-2;
+  background-color: #000;
+}
+.line-3-yin {
+  composes: line-3;
+  background-color: #000;
+}
+.line-4-yin {
+  composes: line-4;
+  background-color: #000;
+}
+.line-5-yin {
+  composes: line-5;
+  background-color: #000;
+}
+.line-6-yin {
+  composes: line-6;
+  background-color: #000;
+}
+
+.line-1-yang {
+  composes: line-1;
+  background-color: #fff;
+}
+.line-2-yang {
+  composes: line-2;
+  background-color: #fff;
+}
+.line-3-yang {
+  composes: line-3;
+  background-color: #fff;
+}
+.line-4-yang {
+  composes: line-4;
+  background-color: #fff;
+}
+.line-5-yang {
+  composes: line-5;
+  background-color: #fff;
+}
+.line-6-yang {
+  composes: line-6;
+  background-color: #fff;
+}

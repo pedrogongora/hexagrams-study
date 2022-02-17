@@ -1,0 +1,25 @@
+
+select {
+  height: 2rem;
+  padding: 0.25rem;
+  border: 1pt solid #333;
+  border-radius: 5px;
+}
+
+select[multiple] {
+  vertical-align: bottom;
+}
+
+select[multiple]:hover,
+select[multiple]:focus,
+select[multiple]:active {
+  position: relative;
+  top: 7.5rem;
+  height: 9.5rem;
+  margin-top: -7.5rem;
+  z-index: 1;
+}
+
+select[multiple] option {
+  height: 1.5rem;
+}

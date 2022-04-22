@@ -4,6 +4,7 @@ import HexagramSquare from './HexagramSquare'
 
 import { hexagramComponentOfType } from './hexagramComponentOfType'
 import {
+  byWenNumber,
   getComplementaryWenNumber,
   getInverseWenNumber,
 } from '../../lib/hexagrams'
@@ -15,26 +16,6 @@ const hexagramTime = R.pipe(R.prop('binaryString'), s => `${s[0]}${s[5]}`)
 const areSameCore = (a, b) => hexagramCore(a) === hexagramCore(b)
 
 const areSameTime = (a, b) => hexagramTime(a) === hexagramTime(b)
-
-const areSameComplementaryInverseSquare = (a, b) => {
-  const aInverseWen = getInverseWenNumber(a)
-  const aComplementary = getComplementaryWenNumber(a)
-  const sameSquare =
-    b.wenNumber === aInverseWen || b.wenNumber === aComplementary
-  console.log('same sq?', a.binaryString, b.binaryString, sameSquare)
-  return sameSquare
-}
-
-const compareComplementaryInverseSquare = (a, b) => {
-  const sameSquare = areSameComplementaryInverseSquare(a, b)
-  return sameSquare
-    ? a.wenNumber > b.wenNumber
-      ? 1
-      : 0
-    : a.wenNumber < b.wenNumber
-    ? -1
-    : 1
-}
 
 const hexagramListItemStyle = {
   width: '8rem',
@@ -95,17 +76,37 @@ const GroupHexagrams = ({ type, group, hexagrams }) => {
 }
 
 const ComplementaryInverseSquareList = ({ type, hexagrams }) => {
-  const sortedHexagrams = hexagrams.sort(compareComplementaryInverseSquare)
-  console.log('sortedHexagrams', sortedHexagrams.map(h => h.binaryString))
-  const squares = R.groupWith(
-    areSameComplementaryInverseSquare,
-    sortedHexagrams
+  const hexagramsMap = new Map()
+  hexagrams.forEach(h => hexagramsMap.set(h.wenNumber, h))
+  const getDiagonalHexagramNumber = R.pipe(
+    getComplementaryWenNumber,
+    byWenNumber,
+    getInverseWenNumber
   )
+  const squares = []
+  hexagrams.forEach(h => {
+    if (hexagramsMap.get(h.wenNumber) === undefined) return
+    const inverse = getInverseWenNumber(h)
+    const complementary = getComplementaryWenNumber(h)
+    const diagonal = getDiagonalHexagramNumber(h)
+    hexagramsMap.delete(h.wenNumber)
+    hexagramsMap.delete(complementary)
+    hexagramsMap.delete(inverse)
+    hexagramsMap.delete(diagonal)
+    squares.push(h.wenNumber)
+  })
   console.log('squares', squares)
   return (
     <>
-      {squares.map(square => (
-        <HexagramSquare key={`hex-${square[0].wenNumber}`} hexagrams={square} />
+      {squares.map(baseHexagramNumber => (
+        <div key={`Square_item_baseHexagramNumber_${baseHexagramNumber}`}>
+          <h3>Cuadro {baseHexagramNumber}</h3>
+          <HexagramSquare
+            key={`hex-${baseHexagramNumber.wenNumber}`}
+            baseHexagramNumber={baseHexagramNumber}
+            hexagrams={hexagrams}
+          />
+        </div>
       ))}
     </>
   )

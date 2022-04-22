@@ -1,6 +1,6 @@
-import styles from './CircularHexagram.module.css'
+import styles from './HexagonalHexagram.module.css'
 
-export const CircularHexagram = ({ hexagram }) => {
+export const HexagonalHexagram = ({ hexagram }) => {
   const lines = Array.from(hexagram.binaryString).map(Number)
   const color = l => (lines[l - 1] ? '#fff' : '#000')
   return (

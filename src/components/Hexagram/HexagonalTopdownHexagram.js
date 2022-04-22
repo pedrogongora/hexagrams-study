@@ -1,6 +1,6 @@
-import styles from './CircularTopdownHexagram.module.css'
+import styles from './HexagonalTopdownHexagram.module.css'
 
-export const CircularTopdownHexagram = ({ hexagram }) => {
+export const HexagonalTopdownHexagram = ({ hexagram }) => {
   const lines = Array.from(hexagram.binaryString).map(Number)
   const color = l => (lines[l - 1] ? '#fff' : '#000')
   return (

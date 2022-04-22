@@ -14,8 +14,8 @@ import { SquaredTopdownHexagram } from '../Hexagram/SquaredTopdownHexagram'
 import { SquaredLRHexagram } from '../Hexagram/SquaredLRHexagram'
 import { SquaredClockHexagram } from '../Hexagram/SquaredClockHexagram'
 import { SquaredNumerologyHexagram } from '../Hexagram/SquaredNumerologyHexagram'
-import { CircularHexagram } from '../Hexagram/CircularHexagram'
-import { CircularTopdownHexagram } from '../Hexagram/CircularTopdownHexagram'
+import { HexagonalHexagram } from '../Hexagram/Hexagonal'
+import { HexagonalTopdownHexagram } from '../Hexagram/HexagonalTopdownHexagram'
 
 import {
   computeBinarySequenceLinks,
@@ -39,9 +39,9 @@ const hexagramComponentOfType = type => {
     case 'cuadrado-numerologia':
       return SquaredNumerologyHexagram
     case 'hexagonal':
-      return CircularHexagram
+      return HexagonalHexagram
     case 'hexagonal-topdown':
-      return CircularTopdownHexagram
+      return HexagonalTopdownHexagram
     case 'tradicional':
     default:
       return Hexagram

@@ -114,7 +114,7 @@ const ComplementaryInverseSquareList = ({ type, hexagrams }) => {
 }
 
 const ListView = ({ type, group, hexagrams }) => (
-  <>
+  <div style={{ paddingTop: '1rem' }}>
     {group === 'secuencia Wen' && (
       <AllHexagrams type={type} hexagrams={hexagrams} />
     )}
@@ -124,7 +124,7 @@ const ListView = ({ type, group, hexagrams }) => (
     {group === 'cuadros complementario-inverso' && (
       <ComplementaryInverseSquareList type={type} hexagrams={hexagrams} />
     )}
-  </>
+  </div>
 )
 
 export default ListView

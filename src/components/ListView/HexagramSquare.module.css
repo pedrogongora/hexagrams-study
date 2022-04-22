@@ -40,15 +40,17 @@
 }
 
 .hLink {
+  min-width: 6rem;
   border-top: 1pt solid blue;
-  font-size: .7rem;
+  font-size: .6rem;
+  text-align: center;
 }
 
 .vLink, .vLink2 {
-  min-height: 3rem;
+  min-height: 5rem;
   max-width: 1pt;
-  line-height: 3rem;
-  font-size: .7rem;
+  line-height: 5rem;
+  font-size: .6rem;
   overflow: visible;
   padding-left: .2rem;
   border-left: 1pt solid red;

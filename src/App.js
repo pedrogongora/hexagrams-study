@@ -63,8 +63,8 @@ const App = () => {
   const [selectedLinks, setSelectedLinks] = useState([])
   const [plotDimensions, setPlotDimensions] = useState('spatial')
   return (
-    <>
-      <div>
+    <div className="App">
+      <div className='App_Controls'>
         <Select options={views} value={view} setter={setView} />
         {view === 'lista' && (
           <>
@@ -105,20 +105,22 @@ const App = () => {
           </>
         )}
       </div>
-      {view === 'lista' && (
-        <ListView type={type} group={group} hexagrams={hexagrams} />
-      )}
-      {view === 'gráfica' && (
-        <GraphView
-          graphType={graphType}
-          plotDimensions={plotDimensions}
-          nodeType={nodeType}
-          selectedLinks={selectedLinks}
-          hexagrams={hexagrams}
-          type={type}
-        />
-      )}
-    </>
+      <div className='App_View'>
+        {view === 'lista' && (
+          <ListView type={type} group={group} hexagrams={hexagrams} />
+        )}
+        {view === 'gráfica' && (
+          <GraphView
+            graphType={graphType}
+            plotDimensions={plotDimensions}
+            nodeType={nodeType}
+            selectedLinks={selectedLinks}
+            hexagrams={hexagrams}
+            type={type}
+          />
+        )}
+      </div>
+    </div>
   )
 }
 

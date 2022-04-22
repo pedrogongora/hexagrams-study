@@ -176,6 +176,7 @@ const GraphView = ({
         linkDirectionalArrowLength={3}
         linkOpacity={1}
         backgroundColor="#eee"
+        height={window.innerHeight - 32}
         {...options}
       />
     </div>

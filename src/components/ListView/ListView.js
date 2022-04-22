@@ -100,7 +100,7 @@ const ComplementaryInverseSquareList = ({ type, hexagrams }) => {
     <>
       {squares.map(baseHexagramNumber => (
         <div key={`Square_item_baseHexagramNumber_${baseHexagramNumber}`}>
-          <h3>Cuadro {baseHexagramNumber}</h3>
+          <h3 style={{ textAlign: 'center' }}>Cuadro {baseHexagramNumber}</h3>
           <HexagramSquare
             key={`hex-${baseHexagramNumber.wenNumber}`}
             baseHexagramNumber={baseHexagramNumber}
@@ -115,7 +115,9 @@ const ComplementaryInverseSquareList = ({ type, hexagrams }) => {
 
 const ListView = ({ type, group, hexagrams }) => (
   <>
-    {group === 'secuencia Wen' && <AllHexagrams type={type} hexagrams={hexagrams} />}
+    {group === 'secuencia Wen' && (
+      <AllHexagrams type={type} hexagrams={hexagrams} />
+    )}
     {(group === 'por núcleo' || group === 'por líneas de tiempo') && (
       <GroupHexagrams type={type} group={group} hexagrams={hexagrams} />
     )}

@@ -23,3 +23,27 @@ select[multiple]:active {
 select[multiple] option {
   height: 1.5rem;
 }
+
+.App {
+  width: 100vw;
+  height: 100vh;
+  max-width: 100vw;
+  max-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.App_Controls {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 2rem;
+  background-color: #eee;
+  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.05);
+  z-index: 10;
+}
+
+.App_View {
+  margin-top: 2rem;
+}

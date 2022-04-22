@@ -17,7 +17,8 @@ export const HexagonalTopdownHexagram = ({ hexagram }) => {
             fill: color(4),
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
-            stroke: '#000',
+            stroke: '#777',
+            strokeWidth: '1pt',
           }}
         />
         <path
@@ -27,7 +28,8 @@ export const HexagonalTopdownHexagram = ({ hexagram }) => {
             fill: color(5),
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
-            stroke: '#000',
+            stroke: '#777',
+            strokeWidth: '1pt',
           }}
         />
         <path
@@ -37,7 +39,8 @@ export const HexagonalTopdownHexagram = ({ hexagram }) => {
             fill: color(6),
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
-            stroke: '#000',
+            stroke: '#777',
+            strokeWidth: '1pt',
           }}
         />
         <path
@@ -47,7 +50,8 @@ export const HexagonalTopdownHexagram = ({ hexagram }) => {
             fill: color(3),
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
-            stroke: '#000',
+            stroke: '#777',
+            strokeWidth: '1pt',
           }}
         />
         <path
@@ -57,7 +61,8 @@ export const HexagonalTopdownHexagram = ({ hexagram }) => {
             fill: color(2),
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
-            stroke: '#000',
+            stroke: '#777',
+            strokeWidth: '1pt',
           }}
         />
         <path
@@ -67,7 +72,8 @@ export const HexagonalTopdownHexagram = ({ hexagram }) => {
             fill: color(1),
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
-            stroke: '#000',
+            stroke: '#777',
+            strokeWidth: '1pt',
           }}
         />
       </svg>

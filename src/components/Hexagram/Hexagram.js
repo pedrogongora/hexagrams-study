@@ -31,7 +31,6 @@ const YinLine = ({ y }) => (
 
 export const Hexagram = ({ hexagram }) => {
   const lines = Array.from(hexagram.binaryString).map(Number)
-  const color = l => (lines[l - 1] ? '#fff' : '#000')
   return (
     <div className={styles.wrapper}>
       <svg
@@ -41,7 +40,11 @@ export const Hexagram = ({ hexagram }) => {
         height="6rem"
       >
         {lines.map((line, i) =>
-          line ? <YangLine y={i} /> : <YinLine y={i} />
+          line ? (
+            <YangLine key={`hexagram-${hexagram.wenNumber}-line-${i}`} y={i} />
+          ) : (
+            <YinLine key={`hexagram-${hexagram.wenNumber}-line-${i}`} y={i} />
+          )
         )}
       </svg>
     </div>

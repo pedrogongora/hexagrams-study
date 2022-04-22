@@ -7,12 +7,12 @@ import './App.css'
 
 import hexagrams from './hexagrams.json'
 
-const views = ['list', 'graph']
+const views = ['lista', 'gráfica']
 const listGroupTypes = [
-  'no-group',
-  'by-core',
-  'by-time',
-  'complementary-inverse',
+  'secuencia Wen',
+  'por núcleo',
+  'por líneas de tiempo',
+  'cuadros complementario-inverso',
 ]
 const graphTypes = ['3D', '2D']
 const nodeTypes = ['dot', 'name', 'hexagram', 'number']
@@ -25,14 +25,14 @@ const linkTypes = [
 ]
 const plotDimensionTypes = ['spatial', 'planar', 'linear']
 const hexagramTypes = [
-  'traditional',
-  'squared',
-  'circular',
-  'squared-lr',
-  'circular-topdown',
-  'squared-topdown',
-  'squared-clock',
-  'squared-numerology',
+  'tradicional',
+  'cuadrado',
+  'hexagonal',
+  'cuadrado-i-d',
+  'hexagonal-topdown',
+  'cuadrado-topdown',
+  'cuadrado-reloj',
+  'cuadrado-numerologia',
 ]
 
 const Select = ({ options, value, setter, multiple }) => (
@@ -54,9 +54,9 @@ const Select = ({ options, value, setter, multiple }) => (
 )
 
 const App = () => {
-  const [type, setType] = useState('traditional')
-  const [view, setView] = useState('graph')
-  const [group, setGroup] = useState('no-group')
+  const [type, setType] = useState('tradicional')
+  const [view, setView] = useState('lista')
+  const [group, setGroup] = useState('secuencia Wen')
   const [graphType, setGraphType] = useState('3D')
   const [nodeType, setNodeType] = useState('dot')
   const [selectedLinks, setSelectedLinks] = useState([])
@@ -65,13 +65,13 @@ const App = () => {
     <>
       <div>
         <Select options={views} value={view} setter={setView} />
-        {view === 'list' && (
+        {view === 'lista' && (
           <>
             <Select options={listGroupTypes} value={group} setter={setGroup} />
             <Select options={hexagramTypes} value={type} setter={setType} />
           </>
         )}
-        {view === 'graph' && (
+        {view === 'gráfica' && (
           <>
             <Select
               options={graphTypes}
@@ -104,10 +104,10 @@ const App = () => {
           </>
         )}
       </div>
-      {view === 'list' && (
+      {view === 'lista' && (
         <ListView type={type} group={group} hexagrams={hexagrams} />
       )}
-      {view === 'graph' && (
+      {view === 'gráfica' && (
         <GraphView
           graphType={graphType}
           plotDimensions={plotDimensions}

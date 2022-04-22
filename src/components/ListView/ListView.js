@@ -42,14 +42,14 @@ const AllHexagrams = ({ type, hexagrams }) => {
 
 const GroupHexagrams = ({ type, group, hexagrams }) => {
   const HexagramComponent = hexagramComponentOfType(type)
-  const groupFn = group === 'by-core' ? areSameCore : areSameTime
-  const groupProp = group === 'by-core' ? hexagramCore : hexagramTime
-  const sortProp = group === 'by-core' ? hexagramTime : hexagramCore
+  const groupFn = group === 'por núcleo' ? areSameCore : areSameTime
+  const groupProp = group === 'por núcleo' ? hexagramCore : hexagramTime
+  const sortProp = group === 'por núcleo' ? hexagramTime : hexagramCore
   const groups = R.pipe(R.sortBy(groupProp), R.groupWith(groupFn))(hexagrams)
   return (
     <>
       {groups.map(g => (
-        <div>
+        <div key={`group_item_${groupProp(g[0])}`}>
           <h3>
             {group} - {groupProp(g[0])}
           </h3>
@@ -104,6 +104,7 @@ const ComplementaryInverseSquareList = ({ type, hexagrams }) => {
           <HexagramSquare
             key={`hex-${baseHexagramNumber.wenNumber}`}
             baseHexagramNumber={baseHexagramNumber}
+            type={type}
             hexagrams={hexagrams}
           />
         </div>
@@ -114,11 +115,11 @@ const ComplementaryInverseSquareList = ({ type, hexagrams }) => {
 
 const ListView = ({ type, group, hexagrams }) => (
   <>
-    {group === 'no-group' && <AllHexagrams type={type} hexagrams={hexagrams} />}
-    {(group === 'by-core' || group === 'by-time') && (
+    {group === 'secuencia Wen' && <AllHexagrams type={type} hexagrams={hexagrams} />}
+    {(group === 'por núcleo' || group === 'por líneas de tiempo') && (
       <GroupHexagrams type={type} group={group} hexagrams={hexagrams} />
     )}
-    {group === 'complementary-inverse' && (
+    {group === 'cuadros complementario-inverso' && (
       <ComplementaryInverseSquareList type={type} hexagrams={hexagrams} />
     )}
   </>

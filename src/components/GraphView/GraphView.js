@@ -28,21 +28,21 @@ import {
 
 const hexagramComponentOfType = type => {
   switch (type) {
-    case 'squared':
+    case 'cuadrado':
       return SquaredHexagram
-    case 'squared-lr':
+    case 'cuadrado-i-d':
       return SquaredLRHexagram
-    case 'squared-topdown':
+    case 'cuadrado-topdown':
       return SquaredTopdownHexagram
-    case 'squared-clock':
+    case 'cuadrado-reloj':
       return SquaredClockHexagram
-    case 'squared-numerology':
+    case 'cuadrado-numerologia':
       return SquaredNumerologyHexagram
-    case 'circular':
+    case 'hexagonal':
       return CircularHexagram
-    case 'circular-topdown':
+    case 'hexagonal-topdown':
       return CircularTopdownHexagram
-    case 'traditional':
+    case 'tradicional':
     default:
       return Hexagram
   }

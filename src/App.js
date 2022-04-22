@@ -26,10 +26,11 @@ const linkTypes = [
 const plotDimensionTypes = ['spatial', 'planar', 'linear']
 const hexagramTypes = [
   'tradicional',
-  'cuadrado',
   'hexagonal',
-  'cuadrado-i-d',
   'hexagonal-topdown',
+  'hexagonal-bottomup',
+  'cuadrado',
+  'cuadrado-i-d',
   'cuadrado-topdown',
   'cuadrado-reloj',
   'cuadrado-numerologia',

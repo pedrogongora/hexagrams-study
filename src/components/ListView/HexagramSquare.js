@@ -7,7 +7,7 @@ import { hexagramComponentOfType } from './hexagramComponentOfType'
 
 import styles from './HexagramSquare.module.css'
 
-const HexagramComponent = ({ type, hexagram }) => {
+const HexagramWrapper = ({ type, hexagram }) => {
   //console.log('hex', hexagram )
   const HC = hexagramComponentOfType(type)
   return (
@@ -31,11 +31,11 @@ const HexagramSquare = ({ type, baseHexagramNumber, hexagrams }) => {
     <div className={styles.HexagramSquare}>
       <div>
         <div>
-          <HexagramComponent hexagram={base} />
+          <HexagramWrapper type={type} hexagram={base} />
           {complementary !== inverse && (
             <>
               <div className={styles.hLink}>complementario</div>
-              <HexagramComponent hexagram={complementary} />
+              <HexagramWrapper type={type}  hexagram={complementary} />
             </>
           )}
         </div>
@@ -55,11 +55,11 @@ const HexagramSquare = ({ type, baseHexagramNumber, hexagrams }) => {
       </div>
       <div>
         <div>
-          <HexagramComponent hexagram={inverse} />
+          <HexagramWrapper type={type}  hexagram={inverse} />
           {complementary !== inverse && (
             <>
               <div className={styles.hLink}>complementario</div>
-              <HexagramComponent hexagram={inverseComplementary} />
+              <HexagramWrapper type={type}  hexagram={inverseComplementary} />
             </>
           )}
         </div>

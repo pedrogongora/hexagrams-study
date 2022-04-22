@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/hexagrams-study/static/css/main.60b6c9c0.css",
+    "main.css": "/hexagrams-study/static/css/main.fd0c4b46.css",
     "main.js": "/hexagrams-study/static/js/main.1dde0a83.js",
     "static/js/787.09299f3a.chunk.js": "/hexagrams-study/static/js/787.09299f3a.chunk.js",
     "index.html": "/hexagrams-study/index.html",
-    "main.60b6c9c0.css.map": "/hexagrams-study/static/css/main.60b6c9c0.css.map",
+    "main.fd0c4b46.css.map": "/hexagrams-study/static/css/main.fd0c4b46.css.map",
     "main.1dde0a83.js.map": "/hexagrams-study/static/js/main.1dde0a83.js.map",
     "787.09299f3a.chunk.js.map": "/hexagrams-study/static/js/787.09299f3a.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.60b6c9c0.css",
+    "static/css/main.fd0c4b46.css",
     "static/js/main.1dde0a83.js"
   ]
 }

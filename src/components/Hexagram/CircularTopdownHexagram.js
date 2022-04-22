@@ -14,7 +14,7 @@ export const CircularTopdownHexagram = ({ hexagram }) => {
           d="m6.9767 178.6 86.602-150 86.601 150h-173.2z"
           style={{
             fillRule: 'evenodd',
-            fill: color(1),
+            fill: color(4),
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
             stroke: '#000',
@@ -24,7 +24,7 @@ export const CircularTopdownHexagram = ({ hexagram }) => {
           d="m93.579 28.605 86.601 150 86.6-150-173.2.005z"
           style={{
             fillRule: 'evenodd',
-            fill: color(2),
+            fill: color(5),
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
             stroke: '#000',
@@ -34,7 +34,7 @@ export const CircularTopdownHexagram = ({ hexagram }) => {
           d="m180.18 178.6 86.6-150 86.61 150z"
           style={{
             fillRule: 'evenodd',
-            fill: color(3),
+            fill: color(6),
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
             stroke: '#000',
@@ -44,7 +44,7 @@ export const CircularTopdownHexagram = ({ hexagram }) => {
           d="m180.18 178.6 86.6 150 86.61-150z"
           style={{
             fillRule: 'evenodd',
-            fill: color(4),
+            fill: color(3),
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
             stroke: '#000',
@@ -54,7 +54,7 @@ export const CircularTopdownHexagram = ({ hexagram }) => {
           d="m93.579 328.6 86.601-150 86.6 150h-173.2z"
           style={{
             fillRule: 'evenodd',
-            fill: color(5),
+            fill: color(2),
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
             stroke: '#000',
@@ -64,7 +64,7 @@ export const CircularTopdownHexagram = ({ hexagram }) => {
           d="m6.9767 178.6 86.602 150 86.601-150h-173.2z"
           style={{
             fillRule: 'evenodd',
-            fill: color(6),
+            fill: color(1),
             strokeLinecap: 'round',
             strokeLinejoin: 'round',
             stroke: '#000',

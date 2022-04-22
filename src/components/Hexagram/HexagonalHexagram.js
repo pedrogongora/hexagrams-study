@@ -1,10 +1,14 @@
 import styles from './HexagonalHexagram.module.css'
 
-export const HexagonalHexagram = ({ hexagram }) => {
+export const HexagonalHexagram = ({ hexagram, clock }) => {
   const lines = Array.from(hexagram.binaryString).map(Number)
   const color = l => (lines[l - 1] ? '#fff' : '#000')
+  const wrapperExtraStyles = {}
+  if (clock) {
+    wrapperExtraStyles.transform = 'rotate(-90deg)'
+  }
   return (
-    <div className={styles.wrapper}>
+    <div className={styles.wrapper} style={wrapperExtraStyles}>
       <svg
         version="1.0"
         viewBox="0 0 360 360"

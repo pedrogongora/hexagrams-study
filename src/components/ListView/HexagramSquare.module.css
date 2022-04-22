@@ -41,7 +41,7 @@
 
 .hLink {
   min-width: 6rem;
-  border-top: 1pt solid blue;
+  border-top: 1pt solid red;
   font-size: .6rem;
   text-align: center;
 }
@@ -53,9 +53,6 @@
   font-size: .6rem;
   overflow: visible;
   padding-left: .2rem;
-  border-left: 1pt solid red;
-}
-.vLink2 {
   border-left: 1pt solid blue;
 }
 

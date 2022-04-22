@@ -27,6 +27,7 @@ const plotDimensionTypes = ['spatial', 'planar', 'linear']
 const hexagramTypes = [
   'tradicional',
   'hexagonal',
+  'hexagonal-reloj',
   'hexagonal-topdown',
   'hexagonal-bottomup',
   'cuadrado',

@@ -1,5 +1,6 @@
 import { Hexagram } from '../Hexagram/Hexagram'
-import { HexagonalHexagram } from '../Hexagram/Hexagonal'
+import { HexagonalHexagram } from '../Hexagram/HexagonalHexagram'
+import { HexagonalClockHexagram } from '../Hexagram/HexagonalClockHexagram'
 import { HexagonalTopdownHexagram } from '../Hexagram/HexagonalTopdownHexagram'
 import { HexagonalBottomupHexagram } from '../Hexagram/HexagonalBottomupHexagram'
 import { SquaredClockHexagram } from '../Hexagram/SquaredClockHexagram'
@@ -22,6 +23,8 @@ export const hexagramComponentOfType = type => {
       return SquaredNumerologyHexagram
     case 'hexagonal':
       return HexagonalHexagram
+    case 'hexagonal-reloj':
+      return HexagonalClockHexagram
     case 'hexagonal-topdown':
       return HexagonalTopdownHexagram
     case 'hexagonal-bottomup':

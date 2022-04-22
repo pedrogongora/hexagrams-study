@@ -1,5 +1,5 @@
 import ReactDOMServer from 'react-dom/server'
-import * as THREE from 'three'
+// import * as THREE from 'three'
 import {
   CSS2DObject,
   CSS2DRenderer,
@@ -10,11 +10,12 @@ import ForceGraph2D from 'react-force-graph-2d'
 
 import { Hexagram } from '../Hexagram/Hexagram'
 import { SquaredHexagram } from '../Hexagram/SquaredHexagram'
+import { HexagonalClockHexagram } from '../Hexagram/HexagonalClockHexagram'
 import { SquaredTopdownHexagram } from '../Hexagram/SquaredTopdownHexagram'
 import { SquaredLRHexagram } from '../Hexagram/SquaredLRHexagram'
 import { SquaredClockHexagram } from '../Hexagram/SquaredClockHexagram'
 import { SquaredNumerologyHexagram } from '../Hexagram/SquaredNumerologyHexagram'
-import { HexagonalHexagram } from '../Hexagram/Hexagonal'
+import { HexagonalHexagram } from '../Hexagram/HexagonalHexagram'
 import { HexagonalTopdownHexagram } from '../Hexagram/HexagonalTopdownHexagram'
 
 import {
@@ -40,6 +41,8 @@ const hexagramComponentOfType = type => {
       return SquaredNumerologyHexagram
     case 'hexagonal':
       return HexagonalHexagram
+    case 'hexagonal-reloj':
+      return HexagonalClockHexagram
     case 'hexagonal-topdown':
       return HexagonalTopdownHexagram
     case 'tradicional':

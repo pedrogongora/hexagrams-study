@@ -34,8 +34,8 @@ const HexagramSquare = ({ type, baseHexagramNumber, hexagrams }) => {
           <HexagramWrapper type={type} hexagram={base} />
           {complementary !== inverse && (
             <>
-              <div className={styles.hLink}>complementario</div>
-              <HexagramWrapper type={type}  hexagram={complementary} />
+              <div className={styles.hLink}>inverso</div>
+              <HexagramWrapper type={type}  hexagram={inverse} />
             </>
           )}
         </div>
@@ -43,22 +43,22 @@ const HexagramSquare = ({ type, baseHexagramNumber, hexagrams }) => {
           <div
             className={complementary !== inverse ? styles.vLink : styles.vLink2}
           >
-            {complementary !== inverse ? 'inverso' : 'complementario'}
+            {complementary !== inverse ? 'complementario' : 'inverso/complementario'}
           </div>
           {complementary !== inverse && (
             <>
               <div>&nbsp;</div>
-              <div className={styles.vLink}>inverso</div>
+              <div className={styles.vLink}>complementario</div>
             </>
           )}
         </div>
       </div>
       <div>
         <div>
-          <HexagramWrapper type={type}  hexagram={inverse} />
+          <HexagramWrapper type={type}  hexagram={complementary} />
           {complementary !== inverse && (
             <>
-              <div className={styles.hLink}>complementario</div>
+              <div className={styles.hLink}>inverso</div>
               <HexagramWrapper type={type}  hexagram={inverseComplementary} />
             </>
           )}

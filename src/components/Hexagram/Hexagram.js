@@ -30,7 +30,7 @@ const YinLine = ({ y }) => (
 )
 
 export const Hexagram = ({ hexagram }) => {
-  const lines = Array.from(hexagram.binaryString).map(Number)
+  const lines = Array.from(hexagram.binaryString).reverse().map(Number)
   return (
     <div className={styles.wrapper}>
       <svg
@@ -39,7 +39,7 @@ export const Hexagram = ({ hexagram }) => {
         width="5rem"
         height="6rem"
       >
-        {lines.map((line, i) =>
+        {Array.from(lines).map((line, i) =>
           line ? (
             <YangLine key={`hexagram-${hexagram.wenNumber}-line-${i}`} y={i} />
           ) : (
